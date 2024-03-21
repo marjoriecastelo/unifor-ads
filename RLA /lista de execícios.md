@@ -295,3 +295,31 @@ pseudocodigo
 | 4  | 5  | 2  | 3  | 4  | 2     | 2 + 3 = 5           | 3     | 5               |
 | 4  | 5  | 3  | 5  | 5  | 3     | 3 + 5 = 8           | 5     | 8               |
 
+Questão 7 - Inversão dos dígitos de um número inteiro 
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite um número inteiro: }}
+B --> C[\num\]
+C --> D{num >= 0}
+D --TRUE--> G[num_inv = 0]
+G --> H{num > 0}
+H --FALSE--> Z{{"Número invertido:", numero_inv}}
+Z --> W([FIM])
+H --TRUE--> I[digito = num % 10]
+I --> J[num_inv = num_inv * 10 + digito]
+J --> K[numero = numero // 10]
+K --LOOP--> H
+D --FALSE--> E{{O número deve ser positivo!}}
+E --> W
+```
+
+#### Teste de mesa 7
+
+| it | num | num_inv | num > 0 | digito | num = num // 10 | num_inv = (num_inv * 10) + digito | Saída                       |
+| -- | --  | --      | --     | --      | --              | --                                | --                          |
+|    | -1  | 0       | False  |         |                 |                                   | O número deve ser positivo! |
+| 1  | 0   | 0       | False  |         |                 |                                   | Número invertido:: 0        |
+| 1  | 42  | 0       | True   | 2       | 4               | 2                                 |                             |
+| 2  | 4   | 2       | True   | 4       | 0               | 24                                |                             |
+| 3  | 0   | 24      | False  |         |                 |                                   | Número invertido:: 24       |
