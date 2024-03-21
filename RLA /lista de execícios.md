@@ -142,6 +142,7 @@ I --LOOP--> E
 Questão 5 - Cálculo fatorial 
 
 ```mermaid
+
 flowchart TD
 A([INICIO]) --> B{{"Digite um numero inteiro nao-negativo:"}}
 B --> C[/n/]
@@ -162,6 +163,7 @@ teste de mesa 5
 Questão 6 - Geração da sequência de Fibonacci
 
 ```mermaid
+
 flowchart TD
 A([INICIO]) --> B([FIM])
 A([INICIO]) --> B{{"Número de termos da série Fibonacci:"}}
