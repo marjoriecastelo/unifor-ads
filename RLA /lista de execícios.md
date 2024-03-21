@@ -74,6 +74,23 @@ I --FALSE--> K[\i =+ 1\]
 J --> K
 K --LOOP--> F
 
+pseudocodico
+
+1. print("Digite o número de alunos: ")
+2. n = int(input())  # número de alunos
+3. cont = 0  # contador de alunos aprovados
+4. i = 1  # contador para iterar sobre os alunos
+//enquanto i for menor ou igual a n
+5. while i <= n:
+// Digite a nota do aluno i
+6.print("Digite a nota do aluno", i, ":")
+7.nota = float(input())
+//Se a nota estiver entre 50 e 100 (inclusive)
+8.if nota >= 50 and nota <= 100:
+9.cont += 1  # Incrementa o contador de alunos aprovados
+10.i += 1  # Incrementa o contador de alunos
+//Número de alunos aprovados
+11.print("Número de alunos aprovados:", cont)
 
 
 
@@ -87,11 +104,12 @@ K --LOOP--> F
 | 4  | 3  | 4  |  2   | False |         |      |             |        |     | Aprovados: 2 |
 
 
-questao3) Soma de um conjunto de números
+questao 3) Soma de um conjunto de números
 
-``` mermaid
+```mermaid
 
 flowchart TD
+A([INICIO]) --> B([FIM])
 A([INICIO]) --> B{{"Digite a quantidade de números<br> (n >= 0):"}}
 B --> C[\n\]
 C --> D{n >= 0}
@@ -107,7 +125,23 @@ H --> I[\num\]
 I --> J[soma =+ num]
 J --> K[i =+ 1]
 K --LOOP--> G
+```
 
+pseudocodigo
+
+  // INICIO
+1.print("Digite o número de termos da série S: ")
+2.n = int(input())  # número de termos da série
+3.S = 0  # inicializa a série S com zero
+   // Loop para cada termo da série
+4.for i in range(n + 1):
+5.numerador = 2 * i + 1
+6.denominador = 2 * i + 2
+7.termo = numerador / denominador
+8.S += termo
+  //Soma da série S
+9.print("Soma da série S é", S)
+  // FIM
 
 ###teste de mesa3
 
@@ -122,10 +156,11 @@ K --LOOP--> G
 
 questaon 4 -Cálculo de um serie
 
+
 ```mermaid
 
 flowchart TD
-
+A([INICIO]) --> B([FIM])
 A([INICIO]) --> B{{Digite o número de termos da série S: }}
 B --> C[/n/]
 C --> D[S = 0]
@@ -137,13 +172,44 @@ F --> G[denominador = 2 * i + 2]
 G --> H[termo = numerador / denominador]
 H --> I[S += termo]
 I --LOOP--> E
+```
 
+pseudocodigo
+
+1.print("Digite o número de termos da série S: ")
+2.n = int(input())  
+3.S = 0  
+4.for i in range(n + 1):
+5.numerador = 2 * i + 1
+6.denominador = 2 * i + 2
+7.termo = numerador / denominador
+8.S += termo
+9.print("Soma da série S é", S)
+
+
+
+
+###teste de mesa 4
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
+| -- | -- | -- |-- | --        | --          | --    | --             | --                     |
+|    | 0  | 0  |   |           |             |       |                |                        |
+| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2    |                        |
+| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 |                        |
+| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   |                        |
+| 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96   | Soma da série S é 2.96 |
 
 Questão 5 - Cálculo fatorial 
+
 
 ```mermaid
 
 flowchart TD
+A([INICIO]) --> B([FIM])
 A([INICIO]) --> B{{"Digite um numero inteiro nao-negativo:"}}
 B --> C[/n/]
 C --> D{n >= 0}
@@ -152,8 +218,30 @@ D --FALSE--> J{{O valor deve ser maior ou igual a zero!}}
 J --> I([FIM])
 E --> F[[i=1 ATÉ n PASSO 1]]
 F --"i > n"--> H{{O fatorial de, n, é:, fator}}
+F --"i=1,2,..n"--> G[fator = fator * i]
+G --LOOP--> F
+H --> I
+```
+pseudocodigo
 
-teste de mesa 5 
+# Entrada
+1.n = int(input("Digite um número inteiro não-negativo: "))
+# Verificação se n é não-negativo
+2.if n >= 0:
+    # Inicialização do fator
+3.fator = 1
+    
+# Loop para calcular o fatorial
+4.for i in range(1, n + 1):
+5.fator *= i
+# Saída do resultado
+6.print("O fatorial de", n, "é:", fator)
+7.else:
+# Mensagem de erro para valores negativos
+8.print("O valor deve ser maior ou igual a zero!")
+#FIM
+
+###teste de mesa 5 
 |N|fator| i | fator = fator * i| saida|
 |  --  |  --  |  --  |  --  |  --  |  --             |
 | 3  | 1     | 1  | 1*1 = 1    |                     |
@@ -163,7 +251,6 @@ teste de mesa 5
 Questão 6 - Geração da sequência de Fibonacci
 
 ```mermaid
-
 flowchart TD
 A([INICIO]) --> B([FIM])
 A([INICIO]) --> B{{"Número de termos da série Fibonacci:"}}
@@ -175,5 +262,36 @@ E --"i=1,2,...,n"--> F{{a}}
 F --> G[termo_atual = a + b]
 G --> H[a = b]
 H --> I[b = termo_atual]
-I --LOOP--> E
+I --LOOP--> E 
+```
+
+pseudocodigo
+# Entrada do número de termos da série Fibonacci
+1.n = int(input("Número de termos da série Fibonacci: "))
+# Inicialização dos primeiros termos da série
+2.a = 0
+3.b = 1
+# Loop para calcular os termos da série Fibonacci
+4.for i in range(1, n + 1):
+# Saída do termo atual
+5.print("Termo", i, "da série Fibonacci:", a)
+# Cálculo do próximo termo
+6.termo_atual = a + b
+# Atualização dos valores para o próximo cálculo
+7. a = b
+8. b = termo_atual
+
+####teste de mesa 6
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| it | n  | a  | b  | i  | saída | termo_atual = a + b | a = b | b = termo_atual |
+| -- | -- | -- | -- | -- | --    | --                  | --    | --              |
+| 1  | 5  | 0  | 1  | 1  | 0     | 0 + 1 = 1           | 1     | 1               |
+| 2  | 5  | 1  | 1  | 2  | 1     | 1 + 1 = 2           | 1     | 2               |
+| 3  | 5  | 1  | 2  | 3  | 1     | 1 + 2 = 3           | 2     | 3               |
+| 4  | 5  | 2  | 3  | 4  | 2     | 2 + 3 = 5           | 3     | 5               |
+| 4  | 5  | 3  | 5  | 5  | 3     | 3 + 5 = 8           | 5     | 8               |
 
