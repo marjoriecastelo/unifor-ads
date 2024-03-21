@@ -11,7 +11,7 @@ Matrícula: preencha com seus dados
 
 ## Lista de questões
 
-### Questão 1 - Troca dos valores de duas variáveis (1 ponto)
+### Questão 1 - Troca dos valores de duas variáveis 
 
 Dadas duas variáveis, $a$ e $b$, implemente e teste um algoritmo para trocar os valores atribuídos a elas.
 
@@ -37,7 +37,7 @@ H --> I{{"a =", a}}
 I --> J{{"b =", b}}
 ```
 
-#### Pseudocódigo (1 ponto)
+#### Pseudocódigo 
 
 ```
 Algoritmo TrocaValores
@@ -59,7 +59,7 @@ FIM
 | -- | -- | --  | -- | -- | --      | --      | 
 | 0  | 1  | 0   | 1  | 0  | a = 1   | b = 0   |
 
-### Questão 2 - Contagem (1 ponto)
+### Questão 2 - Contagem
 
 Dado um conjunto $n$ de notas de alunos em um exame, implemente e teste um algoritmo para fazer uma contagem $cont$ do número de alunos que foram aprovados no exame. 
 Será considerado aprovado o aluno que tirar $nota$ 50 ou maior (no intervalo de 0 a 100).
@@ -113,7 +113,7 @@ H --TRUE--> J[\cont =+ 1\]
 J --LOOP--> E
 ```
 
-#### Pseudocódigo 01 (1 ponto)
+#### Pseudocódigo 01 
 
 ```
 Algoritmo ContaAprovacoes
@@ -156,7 +156,7 @@ Teste de mesa referente ao algoritmo usando o loop PARA.
 | 2  | 3  | 1    | 2  | nota 2  | 40   | False       | 1      |              |
 | 3  | 3  | 1    | 3  | nota 3  | 90   | True        | 2      | Aprovados: 2 |
 
-### Questão 3 - Soma de um conjunto de números (1 ponto)
+### Questão 3 - Soma de um conjunto de números 
 
 Dado um conjunto de $n$ números, implemente e teste um algoritmo para calcular a soma desses números. <br>
 Aceite apenas $n$ maior ou igual a zero.
@@ -191,7 +191,7 @@ J --> K[i =+ 1]
 K --LOOP--> G
 ```
 
-#### Pseudocódigo (1 ponto)
+#### Pseudocódigo 
 
 ```
 Algoritmo SomaNumeros
@@ -222,7 +222,7 @@ FIM
 | 3  | 3  | True   | 15   | 3  | True   | 20  | 15 + 20 = 35 |                         |
 | 4  | 3  | True   | 35   | 4  | False  |     |              | A soma dos números é 35 |
 
-### Questão 4 - Cálculo de uma série (1 ponto)
+### Questão 4 - Cálculo de uma série 
 
 Dado um conjunto de $n$ termos da série, implemente e teste um algoritmo para calcular o valor de S, conforme definido abaixo:
 
@@ -256,7 +256,7 @@ H --> I[S += termo]
 I --LOOP--> E
 ```
 
-#### Pseudocódigo (1 ponto)
+#### Pseudocódigo 
 
 ```
 Algoritmo SomaSerie
@@ -274,7 +274,7 @@ INICIO
 FIM
 ```
 
-#### Teste de mesa (0.25 ponto)
+#### Teste de mesa 
 
 | it | n  | S  | i | numerador | denominador | termo | S += termo     | saída                  |
 | -- | -- | -- |-- | --        | --          | --    | --             | --                     |
@@ -284,7 +284,7 @@ FIM
 | 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08   |                        |
 | 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96   | Soma da série S é 2.96 |
 
-### Questão 5 - Cálculo fatorial (2 pontos)
+### Questão 5 - Cálculo fatorial 
 
 Dado um número $n$, implemente e teste um algoritmo para calcular o fatorial de $n$ (escrito como $n!$), onde $n ≥ 0$.
 
@@ -313,7 +313,7 @@ G --LOOP--> F
 H --> I
 ```
 
-#### Pseudocódigo (2 pontos)
+#### Pseudocódigo 
 
 ```
 Algoritmo CalcFatorial
@@ -376,7 +376,7 @@ H --> I[b = termo_atual]
 I --LOOP--> E 
 ```
 
-#### Pseudocódigo (2 pontos)
+#### Pseudocódigo 
 
 ```
 Algoritmo GeraFibonacci
@@ -441,7 +441,7 @@ D --FALSE--> E{{O número deve ser positivo!}}
 E --> W
 ```
 
-#### Pseudocódigo (2 pontos)
+#### Pseudocódigo 
 
 ```
 Algoritmo InverteInteiro
