@@ -2,12 +2,12 @@ Curso: analise e desenvolvimento de sistema
 Disciplina: raciocinio logico
 Código/Turma:T160-80
 Professor: Ricardo Carubbi
-Data: 21/04/24
+Data: /04/24
 Aluno(a):marjorie castelo dos santos
 Matrícula: preencha com seus dados
 
-1a chamada (Sim/Não): sim
-2a chamada (Sim/Não):nao
+1a chamada (Sim/Não): nao
+2a chamada (Sim/Não):sim
 
 ## Lista de questões
 
@@ -41,18 +41,17 @@ I --> J{{"b =", b}}
 
 ```
 Algoritmo TrocaValores
-INICIO
-...
-1.algoritmo definir_variaveis{Definir variáveis a e b}
-2.definir_variaveis --> atribuir_valores{Atribuir valores iniciais a e b}
-3. atribuir_valores --> guardar_original{Guardar valor original de a em auxiliar}
-4.guardar_original --> atribuir_a{Atribuir valor original de b a a}
-5. atribuir_a --> atribuir_b{Atribuir valor original de a (guardado em auxiliar) a b}
-6.  ALGORITIMO atribuir_b --> mostrar_novos_valores((Exibir novos valores de a e b))
-7. FIM_SE
+1 DECLARE: a = 0; b = 0; aux = 0;
+2 INICIO
+3 LEIA a
+4 LEIA b
+5 DECLARE aux = a
+6 DECLARE a = b
+7 DECLARE b = aux
+8 DECLARE a =, a
+9 DECLARE b =, b
 FIM
 ```
-
 #### Teste de mesa
 
 | a  | b  | aux | a  | b  | saída 1 | saída 2 | 
